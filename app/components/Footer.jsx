@@ -1,6 +1,8 @@
+import styles from "./Footer.module.scss";
+
 export default function Footer() {
 	return (
-		<footer>
+		<footer className={styles.footer}>
 			<h2>Horus Heresy API | Made by Rasmus Bremholm</h2>
 			<p>
 				Everything belongs to Games Workshop, seriously dont sue me, it's just a
