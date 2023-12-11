@@ -10,7 +10,7 @@ export default function Navbar() {
 			<Link href='/legions'>
 				<div className={styles.navbarLinks}>LEGIONS</div>
 			</Link>
-			<Link href='/api'>
+			<Link href='/api-docs'>
 				<div className={styles.navbarLinks}>API</div>
 			</Link>
 		</nav>

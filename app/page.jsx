@@ -28,8 +28,12 @@ export default function Home() {
 			</div>
 			<Divider />
 			<div className={styles.buttons}>
-				<div className={styles.button}>Examples</div>
-				<div className={styles.button}>API Docs</div>
+				<Link href='/legions'>
+					<div className={styles.button}>Examples</div>
+				</Link>
+				<Link href='/api-docs'>
+					<div className={styles.button}>API Docs</div>
+				</Link>
 			</div>
 		</main>
 	);
