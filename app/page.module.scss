@@ -1,3 +1,5 @@
+@import "./styles/variables";
+
 .main {
 	padding: 4rem;
 	display: flex;
@@ -17,4 +19,23 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid $color-primary;
+	padding: 1rem 3rem;
+	&:hover {
+		background-color: darken($color-secondary, 10%);
+	}
 }
