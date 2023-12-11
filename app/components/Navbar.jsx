@@ -5,13 +5,13 @@ export default function Navbar() {
 	return (
 		<nav className={styles.navbar}>
 			<Link href='/'>
-				<div>HOME</div>
+				<div className={styles.navbarLinks}>HOME</div>
 			</Link>
 			<Link href='/legions'>
-				<div>LEGIONS</div>
+				<div className={styles.navbarLinks}>LEGIONS</div>
 			</Link>
 			<Link href='/api'>
-				<div>API</div>
+				<div className={styles.navbarLinks}>API</div>
 			</Link>
 		</nav>
 	);
