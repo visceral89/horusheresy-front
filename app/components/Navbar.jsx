@@ -1,11 +1,17 @@
 import Link from "next/link";
 import styles from "./Navbar.module.scss";
+import Image from "next/image";
 
 export default function Navbar() {
 	return (
 		<nav className={styles.navbar}>
 			<Link href='/'>
-				<div className={styles.navbarLinks}>HOME</div>
+				<Image
+					src='/hh-logo_light.png'
+					width={474 / 3}
+					height={106 / 3}
+					alt='Horus Heresy Logo'
+				/>
 			</Link>
 			<Link href='/legions'>
 				<div className={styles.navbarLinks}>LEGIONS</div>

@@ -8,12 +8,7 @@ export default function Home() {
 		<main className={styles.main}>
 			<div className={styles.header}>
 				<div className={styles.headerImage}>
-					<Image
-						src='/hh-logo.png'
-						width={474 / 3}
-						height={106 / 3}
-						alt='Horus Heresy Logo'
-					/>
+					
 				</div>
 
 				<div className={styles.headerTitle}>
