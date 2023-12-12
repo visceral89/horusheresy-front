@@ -18,7 +18,7 @@ export default function Home() {
 					</p>
 				</div>
 			</div>
-			<Divider />
+
 			<div className={styles.buttons}>
 				<Link href='/legions'>
 					<div className={styles.button}>Examples</div>
@@ -27,7 +27,7 @@ export default function Home() {
 					<div className={styles.button}>API Docs</div>
 				</Link>
 			</div>
-
+			<Divider />
 			<section className={styles.features}>
 				<h2>Features</h2>
 				<p>
