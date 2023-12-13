@@ -37,18 +37,33 @@ export default function Home() {
 				<div className={styles.featuresGrid}>
 					<FeatureCard
 						cardTitle='Specific Legion'
-						cardDesc='Lorem Ipsum'
-						cardImgUrl='./icons/icon.svg'
+						cardDesc='Get all info about a single legion by id.'
+						cardImgUrl='/icons/Army.svg'
 					/>
 					<FeatureCard
-						cardTitle='Specific Legion'
-						cardDesc='Lorem Ipsum'
-						cardImgUrl='./icons/icon.svg'
+						cardTitle='All Legions'
+						cardDesc='Get a list of all legions with all their details.'
+						cardImgUrl='/icons/More Armies.svg'
 					/>
 					<FeatureCard
-						cardTitle='Specific Legion'
-						cardDesc='Lorem Ipsum'
-						cardImgUrl='./icons/icon.svg'
+						cardTitle='Primarch'
+						cardDesc='Get the Primarch of each legion.'
+						cardImgUrl='/icons/Leader.svg'
+					/>
+					<FeatureCard
+						cardTitle='Homeworld'
+						cardDesc='Get the homeworld of your favorite legion.'
+						cardImgUrl='/icons/Planet.svg'
+					/>
+					<FeatureCard
+						cardTitle='Army Size'
+						cardDesc='Display the size of each legion.'
+						cardImgUrl='/icons/Size.svg'
+					/>
+					<FeatureCard
+						cardTitle='Loyalty'
+						cardDesc='Get all legions by allegence to The Emperor'
+						cardImgUrl='/icons/Loyalist.svg'
 					/>
 				</div>
 			</section>

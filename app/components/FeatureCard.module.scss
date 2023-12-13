@@ -1,0 +1,11 @@
+@import "../styles/variables";
+
+.card {
+	height: 300px;
+	padding: 1rem 4rem;
+	border: 1px solid $color-primary;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
