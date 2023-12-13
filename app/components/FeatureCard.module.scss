@@ -8,4 +8,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	&:hover {
+		background-color: darken($color-secondary, 10%);
+	}
 }

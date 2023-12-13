@@ -12,4 +12,7 @@
 
 .navbarLinks {
 	color: $color-secondary;
+	&:hover {
+		color: darken($color-secondary, 20%);
+	}
 }
