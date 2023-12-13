@@ -1,4 +1,4 @@
-import pool from "../../../app/lib/database";
+import pool from "../../app/lib/database";
 
 export default async (req, res) => {
 	try {
