@@ -1,14 +1,13 @@
 import pool from "../../../app/lib/database";
 
 export default async (req, res) => {
-	const { id } = req.query;
+	const legionId = parseInt(req.params.id);
 
 	try {
-		const { rows } = await pool.query("SELECT * FROM legions WHERE id = $1", [
-			id,
-		]);
-		if (rows.length) {
-			req.status(200).json(rows[0]);
+		const query = "SELECT * FROM legions WHERE id=$1";
+		const { rows: legion } = await pool.query(query, [legionId]);
+		if (legion.length) {
+			req.status(200).json(legion[0]);
 		} else {
 			res.status(404).send("Legion not found, try 1-20");
 		}
