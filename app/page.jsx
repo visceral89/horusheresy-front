@@ -31,8 +31,13 @@ export default function Home() {
 			<section className={styles.features}>
 				<h2>Features</h2>
 				<p>
-					Check out the <Link href='/api-docs'>API documentation</Link> for
-					moore info and all the API endpoints.
+					Here you can find all the different features of the API, find specific
+					info you want about each of the Legiones Astartes. Don't forget to
+					check out the{" "}
+					<Link href='/api-docs'>
+						<span className={styles.bold}>API documentation</span>
+					</Link>{" "}
+					for moore info and all the API endpoints.
 				</p>
 				<div className={styles.featuresGrid}>
 					<FeatureCard
