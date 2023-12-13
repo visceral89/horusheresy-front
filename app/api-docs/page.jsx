@@ -1,5 +1,7 @@
 import styles from "./api-docs.module.scss";
 import Sidebar from "./Sidebar";
+import hljs from "highlight.js/lib/core";
+import javascript from "highlight.js/lib/languages/javascript";
 
 export default function Apidocs() {
 	return (
@@ -21,10 +23,15 @@ export default function Apidocs() {
 				<p>
 					The fastest way to get started is by visiting our first API endpoint.
 				</p>
-				<p className={styles.code}>
-					https://horus-heresy-next.vercel.app/api/legions
+				<pre>
+					<code>https://horus-heresy-next.vercel.app/api/legions</code>
+				</pre>
+
+				<p>
+					Here you will find a list of all legions and the data that goes long
+					with that legion. Data like Primarchs name, homeworld, size of army
+					and what allegence they had during the end of the Horus Heresy.
 				</p>
-				<p>Here you will find a list of all legions and the data that goes long with that legion. Data like Primarchs name, homeworld, size of army and what allegence they had during the end of the Horus Heresy.</p>
 			</div>
 		</main>
 	);
