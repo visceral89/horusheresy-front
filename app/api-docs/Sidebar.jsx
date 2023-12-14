@@ -22,13 +22,15 @@ export default function Sidebar() {
 
 	return (
 		<aside className={styles.tocNav}>
-			<ul>
-				{toc.map((item) => (
-					<li className={styles.tocLinkItem}>
-						<Link href={`#${item.id}`}>{item.text}</Link>
-					</li>
-				))}
-			</ul>
+			<div className={styles.listContainer}>
+				<ul>
+					{toc.map((item) => (
+						<li key={item.id} className={styles.tocLinkItem}>
+							<Link href={`#${item.id}`}>{item.text}</Link>
+						</li>
+					))}
+				</ul>
+			</div>
 		</aside>
 	);
 }

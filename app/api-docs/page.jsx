@@ -1,13 +1,15 @@
 import styles from "./api-docs.module.scss";
 import Sidebar from "./Sidebar";
 import Code from "../components/Code";
+import Divider from "../components/Divider";
 
 export default function Apidocs() {
 	return (
 		<main className={styles.main}>
 			<Sidebar />
 			<div className={styles.content} id='content'>
-				<h1>API Documentation</h1>
+				<h1 id='title'>API Documentation</h1>
+				<h2 id='intro'>Introduction</h2>
 				<p>
 					Welcome to the API documentation for the Horus Heresy API. This API
 					was made in 2023 by Rasmus Bremholm and started out as en experiement
@@ -18,19 +20,19 @@ export default function Apidocs() {
 					To get started read the intro chapter on how to use the API down
 					below.
 				</p>
-				<h2>Quick Start</h2>
+				<Divider />
+				<h2 id='quickstart'>Quick Start</h2>
 				<p>
 					The fastest way to get started is by visiting our first API endpoint.
 				</p>
-
 				<Code text={`https://horus-heresy-next.vercel.app/api/legions`} />
-
 				<p>
 					Here you will find a list of all legions and the data that goes long
 					with that legion. Data like Primarchs name, homeworld, size of army
 					and what allegence they had during the end of the Horus Heresy.
 				</p>
-				<h2>Get Legion by ID</h2>
+				<Divider />
+				<h2 id='legionid'>Get Legion by ID</h2>
 				<p>
 					To get info on a specific legion you can use the following endpoint.
 				</p>
@@ -71,12 +73,53 @@ export default function Apidocs() {
 					<li>Raven Guard</li>
 					<li>Alpha Legion</li>
 				</ol>
-				<p className={styles.funfact}>
-					If you are wondering about entry 2 and 11 thoose legions are expunged
-					from the Imperial records in the Lore. So if you see entries such as
-					[redacted] or [deleted] or even [unknown] I still added this info
-					manually for "lore friendly" effect.
+				<div className={styles.funfact}>
+					<p>FUN FACT:</p>
+					<p>
+						If you are wondering about entry 2 and 11 thoose legions are
+						expunged from the Imperial records in the Lore. So if you see
+						entries such as [redacted] or [deleted] or even [unknown] I still
+						added this info manually for "lore friendly" effect.
+					</p>
+				</div>
+				<h3 id='legiondata'>Legion Data</h3>
+				<p>
+					Each legion returns as a single object with properties such as "id",
+					"name" and "description". These are all properties of the single
+					legion object so when acessing the properties you can just use.
 				</p>
+				<Code text={`const data = legions.name`} />
+				<p>
+					This makes it easier for me personally. That everything isnt packed in
+					a single data object that you have to filter out stuff from. If you
+					have suggestions on if I should change this, please shoot me a messege
+					and i'll fix it right up.
+				</p>
+				<p>
+					Here is a list of all the current properties as of v0.1.0. The list of
+					properties and what they mean should be obvious, and i tried really
+					hard to keep the naming as clear and concise as possible.
+				</p>
+				<Code text={`"id":int4`} />
+				<Code text={`"name":varchar(255)`} />
+				<Code text={`"description":text`} />
+				<Code text={`"primarch":varchar(255)`} />
+				<Code text={`"traitor":bool`} />
+				<Code text={`"homeworld":varchar(255)`} />
+				<Code
+					text={`"colors":json (Object containing properties for "primary" and "secondary" colors.)`}
+				/>
+				<Code
+					text={`"size":int8 (Size of the legions army, its usually in the 100,000 range.)`}
+				/>
+				<Code
+					text={`"characters":json (Same as color, will be a list of noteworthy characters from the legion.)`}
+				/>
+				<Code text={`"quote":varchar(255)`} />
+				<Code text={`"battlecry":varchar(255)`} />
+				<h3>NOT USED RIGHT NOW</h3>
+				<Code text={`"primarch_image_url":varchar(255)`} />
+				<Code text={`"homeworld_image_url":varchar(255)`} />
 			</div>
 		</main>
 	);

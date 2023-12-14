@@ -12,10 +12,17 @@
 	display: flex;
 	flex: 1;
 	flex-direction: column;
-	align-items: center;
-	height: 100%;
+	align-items: flex-start;
+	//height: 100%;
 	max-width: 30%;
 	text-align: left;
+	scroll-behavior: smooth;
+	overflow: visible;
+}
+
+.listContainer {
+	position: sticky;
+	top: 0;
 }
 
 .content {
@@ -29,8 +36,9 @@
 
 .funfact {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
 	background-color: rgba($color: #cedeff2a, $alpha: 1);
 	padding: 1rem 2rem;
 	text-wrap: stable;
