@@ -6,6 +6,10 @@ export default async (req, res) => {
 	try {
 		const query = "SELECT * FROM legions WHERE id = $1";
 		const { rows: legion } = await pool.query(query, [legionId]);
+		res.setHeader(
+			"Cache-Control",
+			"public, s-maxage=3600, stale-while-revalidate=3600"
+		);
 
 		if (legion.length) {
 			res.status(200).json(legion[0]);
