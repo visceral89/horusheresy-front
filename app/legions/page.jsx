@@ -3,7 +3,7 @@ import Card from "../components/Card";
 
 export default async function Legions() {
 	return (
-		<>
+		<main>
 			<h1>Legions Page</h1>
 			<p>
 				Here you will find all the active legions beeing used from the API For
@@ -11,6 +11,6 @@ export default async function Legions() {
 				<Link href='/api-docs'>API Documentation.</Link>
 			</p>
 			<section></section>
-		</>
+		</main>
 	);
 }
