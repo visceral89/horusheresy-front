@@ -21,11 +21,7 @@ export default async function Legions() {
 				moore info on how this was achived, please visit the{" "}
 				<Link href='/api-docs'>API Documentation.</Link>
 			</p>
-			<section>
-				{legions.map((legion) => (
-					<Card key={legion.id} />
-				))}
-			</section>
+			<section></section>
 		</>
 	);
 }
