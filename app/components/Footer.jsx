@@ -9,6 +9,10 @@ export default function Footer() {
 				hobby project. This API will never earn me any money and will always
 				remain free, it might cost me money though.
 			</p>
+			<p>
+				Visit / Contact me :{" "}
+				<a href='https://rasmusbremholm.com'>Rasmus Bremholm</a>
+			</p>
 		</footer>
 	);
 }

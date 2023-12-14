@@ -17,6 +17,7 @@ body {
 a {
 	text-decoration: none;
 	color: $color-primary;
+	font-weight: bold;
 	&:visited {
 		text-decoration: none;
 		color: $color-primary;

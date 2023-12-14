@@ -2,6 +2,7 @@ import styles from "./api-docs.module.scss";
 import Sidebar from "./Sidebar";
 import Code from "../components/Code";
 import Divider from "../components/Divider";
+import Link from "next/link";
 
 export default function Apidocs() {
 	return (
@@ -140,6 +141,10 @@ export default function Apidocs() {
 					the following endpoint.
 				</p>
 				<Code text={`https://horus-heresy-next.vercel.app/api/loyalists`} />
+				<p>
+					Too see all theese beeing used practically, please visit the{" "}
+					<Link href='/legions'>Legions page</Link>.
+				</p>
 			</div>
 		</main>
 	);
