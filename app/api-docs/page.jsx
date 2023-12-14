@@ -120,6 +120,26 @@ export default function Apidocs() {
 				<h3>NOT USED RIGHT NOW</h3>
 				<Code text={`"primarch_image_url":varchar(255)`} />
 				<Code text={`"homeworld_image_url":varchar(255)`} />
+				<div className={styles.funfact}>
+					<p>Fun fact?</p>
+					<p>
+						I choose not to include the primarch image or homeworld image since
+						i couldnt solve the image hosting. Ill probably modify the default
+						endpoint to exclude theese field in the future. Right now the URL's
+						will just point to the image paths of this project.
+					</p>
+				</div>
+				<h2>Get all Traitor Legions</h2>
+				<p>
+					To get all the traitor legions (bad guys) use the following endpoint.
+				</p>
+				<Code text={`https://horus-heresy-next.vercel.app/api/traitors`} />
+				<h2>Get all Loyalist Legions</h2>
+				<p>
+					On the other hand, if you want a list of all the goodies you can use
+					the following endpoint.
+				</p>
+				<Code text={`https://horus-heresy-next.vercel.app/api/loyalists`} />
 			</div>
 		</main>
 	);
