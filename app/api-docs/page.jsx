@@ -30,6 +30,53 @@ export default function Apidocs() {
 					with that legion. Data like Primarchs name, homeworld, size of army
 					and what allegence they had during the end of the Horus Heresy.
 				</p>
+				<h2>Get Legion by ID</h2>
+				<p>
+					To get info on a specific legion you can use the following endpoint.
+				</p>
+				<Code text={`https://horus-heresy-next.vercel.app/api/legion/[id]`} />
+				<p>
+					The id field needs to be populated with a number between 1 and 20.
+					Otherwise the API will return with a 500 error code telling you that
+					the id is out of the scope.
+				</p>
+				<p>
+					I made sure the ID field corresponds to each Legions number instead of
+					beeing just an index. This way the user gets a two in one, both
+					legiion number and a convinient id to select specific legions.
+				</p>
+				<p>
+					For thoose not knowing what legion corresponds to each number i have
+					included a list below.
+				</p>
+				<ol>
+					<li>Dark Angels</li>
+					<li>[Redacted]</li>
+					<li>Emperor's Children</li>
+					<li>Iron Warriors</li>
+					<li>White Scars</li>
+					<li>Space Wolves</li>
+					<li>Imperial Fists</li>
+					<li>Night Lords</li>
+					<li>Blood Angels</li>
+					<li>Iron Hands</li>
+					<li>[UNKNOWN]</li>
+					<li>World Eaters</li>
+					<li>Ultramarines</li>
+					<li>Death Guard</li>
+					<li>Thousand Sons</li>
+					<li>Sons of Horus (Luna Wolves)</li>
+					<li>Word Bearers</li>
+					<li>Salamanders</li>
+					<li>Raven Guard</li>
+					<li>Alpha Legion</li>
+				</ol>
+				<p className={styles.funfact}>
+					If you are wondering about entry 2 and 11 thoose legions are expunged
+					from the Imperial records in the Lore. So if you see entries such as
+					[redacted] or [deleted] or even [unknown] I still added this info
+					manually for "lore friendly" effect.
+				</p>
 			</div>
 		</main>
 	);
