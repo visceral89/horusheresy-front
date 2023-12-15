@@ -8,13 +8,15 @@
 	height: 350px;
 	padding: 1rem 3rem;
 	position: relative;
+
+	// Shadow
 }
 
 .legionNumber {
 	font-size: 2rem;
 	line-height: 3rem;
 	position: absolute;
-	top: 1rem;
+	top: 0.5rem;
 	left: 2rem;
 	z-index: 3;
 }

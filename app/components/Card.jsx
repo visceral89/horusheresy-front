@@ -6,7 +6,7 @@ export default function Card({ id, name, primarch_image, url }) {
 		<div className={styles.card}>
 			<h2 className={styles.legionName}>{name}</h2>
 			<p className={styles.legionNumber}>{id}</p>
-			<Image src={"/"} fill={true} className={styles.legionImage} />
+			<Image src={primarch_image} className={styles.legionImage} />
 		</div>
 	);
 }
