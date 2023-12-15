@@ -9,3 +9,19 @@
 	padding: 1rem 3rem;
 	position: relative;
 }
+
+.legionNumber {
+	font-size: 2rem;
+	line-height: 3rem;
+	position: absolute;
+	top: 1rem;
+	left: 2rem;
+	z-index: 3;
+}
+
+.legionName {
+	z-index: 2;
+}
+.legionImage {
+	z-index: 0;
+}
