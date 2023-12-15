@@ -2,7 +2,8 @@ import styles from "../legions.module.scss";
 import getLegions from "@/app/lib/getLegions";
 
 export default async function LegionDetails({ params }) {
-	const legion = await getLegions();
+	const slug = params.id;
+	const legion = await getLegions(slug);
 
 	return (
 		<main>
