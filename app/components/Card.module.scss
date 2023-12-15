@@ -1,3 +1,11 @@
+@import "../styles/variables";
+
 .card {
-	background-color: #333;
+	border: 1px solid $color-primary;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 350px;
+	padding: 1rem 3rem;
+	position: relative;
 }

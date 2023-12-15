@@ -1,0 +1,15 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+.cardSection {
+	padding-left: 15%;
+	padding-right: 15%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	gap: 1rem;
+}
