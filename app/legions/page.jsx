@@ -3,6 +3,13 @@ import Card from "../components/Card";
 import getLegions from "../lib/getLegions";
 import styles from "./legions.module.scss";
 
+
+export const metadata = {
+	title: "Horus Heresy API Examples",
+	description:
+		"Welcome to the Horus Heresy API. A restful API for everything Horus Heresy!",
+};
+
 export default async function Legions() {
 	const legions = await getLegions();
 
