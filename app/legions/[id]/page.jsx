@@ -1,12 +1,23 @@
 import styles from "../legions.module.scss";
-import getLegions from "@/app/lib/getLegions";
+import getLegion from "@/app/lib/getLegion";
+import Image from "next/image";
 
 export default async function LegionDetails({ params: { id } }) {
-	const legion = await getLegions(id);
-
+	const legion = await getLegion(id);
 	return (
-		<main>
-			<h1>{legion.name}</h1>
+		<main className={styles.legionMain}>
+			<div className={styles.legionContainer}>
+				<h1>{legion.name}</h1>
+				<p>{legion.description}</p>
+				<div className={styles.infoContainer}>
+					<div className={styles.info}>Homeworld: {legion.homeworld}</div>
+					<div className={styles.info}>Army Size: {legion.size}</div>
+					<div className={styles.info}>Primarch: {legion.primarch}</div>
+				</div>
+			</div>
+			<div className={styles.imageContainer}>
+				{/* <Image src={legion.primarch_image_url} /> */}
+			</div>
 		</main>
 	);
 }

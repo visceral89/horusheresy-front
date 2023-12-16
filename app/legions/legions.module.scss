@@ -4,6 +4,14 @@
 	justify-content: center;
 	width: 100%;
 }
+.legionMain {
+	display: flex;
+	flex-direction: row;
+	padding-left: 15%;
+	padding-right: 15%;
+	margin-bottom: 4rem;
+	margin-top: 4rem;
+}
 
 .cardSection {
 	padding-left: 15%;
@@ -12,4 +20,24 @@
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: auto;
 	gap: 1rem;
+}
+
+.legionContainer {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	padding-right: 2rem;
+	flex: 1;
+}
+
+.imageContainer {
+	border: 1px solid #3333;
+	height: 400px;
+	width: 300px;
+}
+
+.infoContainer {
+	margin-top: 1rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 }
