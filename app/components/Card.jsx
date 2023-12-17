@@ -9,12 +9,18 @@ export default function Card({ id, name, primarch_image, url }) {
 			<h2 className={styles.legionName}>{name}</h2>
 			<p className={styles.legionNumber}>{id}</p>
 			<div className={styles.legionImageContainer}>
-				{primarch_image && (
+				{primarch_image ? (
 					<Image
 						className={styles.legionImage}
 						src={primarch_image}
 						fill={true}
 						objectFit='cover'
+					/>
+				) : (
+					<Image
+						className={styles.legionImage}
+						src={"/placeholder.jpg"}
+						fill={true}
 					/>
 				)}
 			</div>
