@@ -3,7 +3,6 @@ import Card from "../components/Card";
 import getLegions from "../lib/getLegions";
 import styles from "./legions.module.scss";
 
-
 export const metadata = {
 	title: "Horus Heresy API Examples",
 	description:
@@ -12,6 +11,7 @@ export const metadata = {
 
 export default async function Legions() {
 	const legions = await getLegions();
+	legions.sort((a, b) => a.id - b.id);
 
 	return (
 		<main className={styles.main}>
