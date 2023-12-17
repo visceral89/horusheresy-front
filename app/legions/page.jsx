@@ -24,7 +24,12 @@ export default async function Legions() {
 			<section className={styles.cardSection}>
 				{legions.map((legion) => (
 					<Link key={legion.id} href={`/legions/${legion.id}`}>
-						<Card key={legion.id} id={legion.id} name={legion.name} />
+						<Card
+							key={legion.id}
+							id={legion.id}
+							name={legion.name}
+							primarch_image={legion.primarch_image_url}
+						/>
 					</Link>
 				))}
 			</section>

@@ -16,7 +16,12 @@ export default async function LegionDetails({ params: { id } }) {
 				</div>
 			</div>
 			<div className={styles.imageContainer}>
-				{/* <Image src={legion.primarch_image_url} /> */}
+				<Image
+					src={legion.primarch_image_url}
+					width={400}
+					height={400}
+					objectFit='cover'
+				/>
 			</div>
 		</main>
 	);
