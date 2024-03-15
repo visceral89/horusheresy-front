@@ -50,8 +50,8 @@ Once the server is running, you can access the API endpoints:
 
 ### To:do
 
-- Add API Documentation Page
-- Add Examples Page
+- Add API Documentation Page ~~
+- Add Examples Page ~~
 - Add notable characters.
 - Add colorschemes.
 - ~~Add all the legions to the array.~~
