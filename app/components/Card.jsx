@@ -7,12 +7,7 @@ export default function Card({ id, name, url }) {
 			<h2 className={styles.legionName}>{name}</h2>
 			<p className={styles.legionNumber}>{id}</p>
 			<div className={styles.legionImageContainer}>
-				<Image
-					className={styles.legionImage}
-					src={`/primarchs/${id}.jpg`}
-					fill={true}
-					objectFit='cover'
-				/>
+				<Image className={styles.legionImage} src={`/primarchs/${id}.jpg`} fill={true} alt={name} />
 			</div>
 		</div>
 	);
