@@ -22,6 +22,11 @@ export default function Apidocs() {
 					below.
 				</p>
 				<Divider />
+				<h2>News !</h2>
+				<p>Some important news. As v 0.2 draws near the API will now a require an api-key to work.
+				</p>
+				<p>Please reach out to me via email, linkedin or whatever method you want incase you want to use the API and ill hook you up with a key.</p>
+				<Divider />
 				<h2 id='quickstart'>Quick Start</h2>
 				<p>
 					The fastest way to get started is by visiting our first API endpoint.
