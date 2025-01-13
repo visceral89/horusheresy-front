@@ -1,23 +1,21 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
 export function middleware(request) {
-  // Retrieve the API key from the request headers
-  const apiKey = request.headers.get('x-api-key');
+	const apiKey = request.headers.get("x-api-key");
+	const response = NextResponse.next();
 
-  // Check if the API key is valid
-  if (!apiKey || apiKey !== process.env.API_KEY) {
-    // Respond with a 403 Forbidden status if the API key is missing or invalid
-    return NextResponse.json(
-      { message: 'Forbidden: Invalid API Key' },
-      { status: 403 }
-    );
-  }
+	// Set CORS headers
+	response.headers.set("Access-Control-Allow-Origin", "*"); // Allow all origins
+	response.headers.set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+	response.headers.set("Access-Control-Allow-Headers", "Content-Type, x-api-key");
 
-  // If valid, proceed with the request
-  return NextResponse.next();
+	if (!apiKey || apiKey !== process.env.API_KEY) {
+		return NextResponse.json({ message: "Forbidden: Invalid API Key" }, { status: 403 });
+	}
+
+	return response;
 }
 
-// Apply middleware only to API routes
 export const config = {
-  matcher: '/api/:path*', // Match all API routes
+	matcher: "/api/:path*", // Match all API routes
 };
